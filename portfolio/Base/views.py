@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from Base import models
 from Base.models import Contact
+from django.shortcuts import render, redirect
 
 # Create your views here.
 # def home(request):
@@ -42,6 +43,6 @@ def contact(request):
 
         messages.success(request, "Thank you! Your message has been saved.")
 
-        print("Data saved to database")
+        return redirect('/')
 
     return render(request, "home.html")

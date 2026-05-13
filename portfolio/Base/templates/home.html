@@ -1,153 +1,281 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raghav Mangal | Portfolio</title>
-
+    <title>Raghav Mangal | Backend Developer</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+    <!-- Noise overlay for texture -->
+    <div class="noise"></div>
 
     <header>
         <nav class="navbar">
-            <h2 class="logo">Raghav</h2>
-
+            <div class="logo">RM<span class="logo-dot">.</span></div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home"><span></span>Home</a></li>
+                <li><a href="#about"><span></span>About</a></li>
+                <li><a href="#skills"><span></span>Skills</a></li>
+                <li><a href="#projects"><span></span>Projects</a></li>
+                <li><a href="#contact"><span></span>Contact</a></li>
             </ul>
         </nav>
     </header>
 
-
     <!-- HERO -->
     <section id="home" class="hero">
-
-        <div class="hero-text">
-            <h3>Hello, I'm</h3>
-            <h1>Raghav Mangal</h1>
-            <h2>Python / Backend Developer</h2>
-
-            <div class="hero-buttons">
-                <a href="{% static 'pdf/raghav-resume.pdf' %}" target="_blank" class="btn">Resume</a>
-                <a href="#contact" class="btn secondary">Let's Talk</a>
+        <div class="hero-bg-text">BACKEND</div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-tag"><span class="dot"></span>Available for opportunities</div>
+                <h3 class="hero-hello">Hello, I'm</h3>
+                <h1 class="hero-name">Raghav<br><em>Mangal</em></h1>
+                <div class="hero-role">
+                    <span class="role-line"></span>
+                    <h2>Python / Backend Developer</h2>
+                </div>
+                <p>2025 CS Graduate passionate about building scalable backends and solving real-world problems with clean, efficient code.</p>
+                <div class="hero-buttons">
+                    <a href="{% static 'pdf/raghav-resume.pdf' %}" target="_blank" class="btn">
+                        <i class="fa-solid fa-file-lines"></i> View Resume
+                    </a>
+                    <a href="#contact" class="btn outline">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="img-frame">
+                    <div class="img-box">
+                        <img src="{% static 'images/profile.jpeg' %}" alt="Raghav Mangal">
+                    </div>
+                    <div class="img-accent-1"></div>
+                    <div class="img-accent-2"></div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>2+</strong><span>Years Coding</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>10+</strong><span>Projects Done</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>B.Tech</strong><span>CSE Graduate</span></div>
+                </div>
             </div>
         </div>
-
-        <div class="hero-image">
-            <img src="{% static 'images/profile.jpeg' %}" alt="profile">
-        </div>
-
+        <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
     </section>
-
 
     <!-- ABOUT -->
     <section id="about" class="section">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="about-container">
-
-            <img src="{% static 'images/avatar.jpeg' %}" alt="avatar">
-
-            <p>
-                I am a backend developer passionate about building scalable
-                applications and solving real-world problems using Python,
-                Django, and modern web technologies.
-            </p>
-
+        <div class="container">
+            <div class="section-label"> — ABOUT ME</div>
+            <div class="about-container">
+                <div class="about-img-col">
+                    <div class="about-img-wrap">
+                        <div class="about-img-inner">
+                            <img src="{% static 'images/avatar-removebg-preview.png' %}" alt="avatar">
+                        </div>
+                        <div class="about-img-border"></div>
+                        <div class="about-img-tag">
+                            <i class="fa-brands fa-python"></i>
+                            <span>Backend Dev</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Crafting Robust<br><em>Digital Backends</em></h2>
+                    <p>I am a dedicated Backend Developer with a B.Tech in Computer Science Engineering. My expertise lies in building robust web applications using <strong>Python and Django</strong>.</p>
+                    <p>I enjoy optimizing server-side logic and managing databases to create seamless, performant user experiences — writing code that is clean, scalable, and built to last.</p>
+                    <div class="about-pills">
+                        <span>Problem Solver</span>
+                        <span>Detail Oriented</span>
+                        <span>Team Player</span>
+                        <span>Fast Learner</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
-
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
-
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills-grid">
-
-            <div class="skill">Python</div>
-            <div class="skill">Django</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">SQL</div>
-
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <div class="section-label"> — TECHNICAL SKILLS</div>
+            <h2 class="section-title centered">My <em>Toolbox</em></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">Python</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">Django</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">SQL / MySQL</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">HTML5</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">CSS3</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                    <div class="skill-info">
+                        <p class="skill-name">Git</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
-
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-
-        <h2 class="section-title">Projects</h2>
-
-        <div class="project-grid">
-
-            <div class="project-card">
-                <h3>Amazon Clone</h3>
-                <p>Simple e-commerce clone using HTML and CSS.</p>
-                <a href="#" class="btn small">Github</a>
+        <div class="container">
+            <div class="section-label"> — PROJECTS</div>
+            <h2 class="section-title centered">Featured <em>Work</em></h2>
+            <div class="project-grid">
+                <div class="project-card featured">
+                    <div class="project-number">01</div>
+                    <div class="project-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="project-tag">Full-Stack · Django · MySQL</div>
+                    <h3>Job Board Aggregator</h3>
+                    <p>A full-stack Django application for industry-level job tracking, featuring automated data handling and MySQL integration.</p>
+                    <a href="#" class="project-link">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <div class="project-icon-box"><i class="fa-brands fa-amazon"></i></div>
+                    <div class="project-tag">Frontend · HTML · CSS</div>
+                    <h3>Amazon Clone</h3>
+                    <p>A responsive e-commerce front-end focused on UI/UX and modern CSS layouts with pixel-perfect fidelity.</p>
+                    <a href="#" class="project-link">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="project-tag">Django · Deployment</div>
+                    <h3>Django Portfolio</h3>
+                    <p>This website — built with Django to showcase backend skills, project deployment, and server-side templating.</p>
+                    <a href="#" class="project-link">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>Personal portfolio built using Django.</p>
-                <a href="#" class="btn small">Github</a>
-            </div>
-
         </div>
-
     </section>
-
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-
-        <h2 class="section-title">Contact Me</h2>
-
-        <form class="contact-form" method="post">
-            {% csrf_token %}
-
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="number" placeholder="Phone">
-
-            <textarea name="content" placeholder="Message"></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <div class="section-label"> — CONTACT</div>
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2 class="section-title">Let's Build<br><em>Something Great</em></h2>
+                    <p>Have a project in mind or just want to say hello? My inbox is always open.</p>
+                    <div class="contact-info-list">
+                        <a href="mailto:raghav@example.com" class="contact-info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>raghavagarwal9755@gmail.com</span>
+                        </a>
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>India</span>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="input-wrap">
+                            <input type="text" name="name" placeholder=" " required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="email" name="email" placeholder=" " required>
+                            <label>Email Address</label>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="number" placeholder=" ">
+                        <label>Phone Number</label>
+                    </div>
+                    <div class="input-wrap">
+                        <textarea name="content" rows="5" placeholder=" " required></textarea>
+                        <label>Your Message</label>
+                    </div>
+                    <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
     </section>
 
-
     <footer>
-
-        <p>© 2026 Raghav Mangal</p>
-
-        <div class="social">
-
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-
+        <div class="container footer-inner">
+            <div class="footer-logo">RM<span>.</span></div>
+            <p>© 2026 Raghav Mangal · Python Developer</p>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
-
     </footer>
 
 
-</body>
+<script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.section-title, .project-card, .skill-card, .about-container, .contact-layout, .hero-stats');
+    reveals.forEach(el => el.classList.add('reveal'));
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+                setTimeout(() => e.target.classList.add('visible'), i * 80);
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
 
+    // Active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 100, h = sec.offsetHeight;
+            const id = sec.getAttribute('id');
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+            if (link) {
+                if (scrollY >= top && scrollY < top + h) link.style.color = 'var(--gold)';
+                else link.style.color = '';
+            }
+        });
+    });
+</script>
+</body>
 </html>
